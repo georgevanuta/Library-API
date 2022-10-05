@@ -1,0 +1,68 @@
+Name: VANUTA George-Andrei  |
+Group: 324CB                |
+-----------------------------
+
+                                        -------------------
+                    ----------------------HOMEWORK 3 PCOM----------------------
+                                        -------------------
+
+    -I used https://github.com/kgabis/parson because it is lightweight, and I didn't need
+        a lot of functionality, only needed functions to process and build jsons.
+
+    -EXIT
+        -breaks from the read command from client loop, closing the connection in the process
+
+    -REGISTER/LOGIN
+        -they have very similar behavious, so I used one function for both of them (the url and response 
+            is different)
+        -prompt for username and password
+        -check for whitespaces
+        -construct user json payload
+        -send the POST request to server
+        -return response from server
+
+    -ENTER_LIBRARY
+        -process cookies(must have a session cookie)
+        -send the GET request to server
+        -return response from server
+
+    -GET_BOOKS
+        -process cookies
+        -add JWT token to http header(must have)
+        -send the GET request to server
+        -return response from server
+
+    -GET_BOOK
+        -process cookies
+        -prompt for id
+        -check whether id is valid
+        -construct url
+        -add JWT token to http header(must have)
+        -send the GET request to server
+        -return response from server
+
+    -ADD_BOOK
+        -process cookies
+        -prompt for book details
+        -check whether pagecount is valid
+        -construct book json payload
+        -add JWT token to http header(must have)
+        -send the POST request to server
+        -return response from server
+
+    -DELETE_BOOK
+        -process cookies
+        -prompt for id
+        -check whether id is valid
+        -construct url
+        -add JWT token to http header(must have)
+        -send the DELETE request to server
+        -return response from server
+
+    -LOGOUT
+        -process cookies
+        -send the GET request to server
+        -return response from server
+
+    -HELP
+        -list all valid commands
